@@ -1,39 +1,37 @@
+import { PowerfullSection } from "@/components/powerfull-section"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export default function Home() {
   return (
-    <div 
-      className="relative min-h-screen overflow-hidden" 
-      style={{ background: 'var(--back, linear-gradient(315deg, #0A090C 0.38%, #1A092D 99.62%))' }}
+    <div
+      className="relative min-h-screen overflow-hidden"
+      style={{ background: "var(--back, linear-gradient(315deg, #0A090C 0.38%, #1A092D 99.62%))" }}
     >
       {/* Content */}
       <div className="relative z-10">
         {/* Background image container - full width, covers header and hero */}
-        <div className="absolute inset-x-0 top-0 h-[800px]  z-0 overflow-hidden">
+        <div className="absolute inset-x-0 top-0 h-[700px] z-0 overflow-hidden">
           <img
             src="/trading-image.png"
             alt="Trading chart background"
             className="w-full h-full object-cover opacity-60"
           />
           {/* Gradient overlay for smooth transition to background */}
-          <div 
+          <div
             className="absolute inset-0"
             style={{
-              background: 'linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(10, 9, 12, 0.3) 60%, rgba(26, 9, 45, 0.6) 80%, rgba(10, 9, 12, 0.95) 95%, rgba(10, 9, 12, 1) 100%)'
+              background:
+                "linear-gradient(to bottom, transparent 0%, transparent 40%, rgba(10, 9, 12, 0.3) 60%, rgba(26, 9, 45, 0.6) 80%, rgba(10, 9, 12, 0.95) 95%, rgba(10, 9, 12, 1) 100%)",
             }}
           />
         </div>
-        
+
         {/* Header */}
         <header className="relative z-10 px-8 py-6 lg:px-16">
           <div className="mx-auto max-w-7xl flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img
-                src="/logo.svg"
-                alt="ForMatrix Logo"
-                className="h-10 w-10"
-              />
+              <img src="/logo.svg" alt="ForMatrix Logo" className="h-10 w-10" />
               <h1 className="text-2xl font-bold text-white lg:text-3xl">
                 For<span className="text-[#8b5cf6]">Matrix</span>
               </h1>
@@ -83,243 +81,101 @@ export default function Home() {
             </div>
           </div>
 
-          <section className="mx-auto mt-24 max-w-7xl lg:mt-32">
-            <div className="text-center">
-              <h2 className="mb-2 text-4xl font-bold text-white lg:text-5xl">How It Works</h2>
-              <div className="mx-auto mb-4 h-1 w-64 bg-gradient-to-r from-[#6D1D7D] via-[#5F0BE8] to-[#6D1D7D]" />
-              <p className="mb-16 text-lg text-gray-300">Simple, fast and powerful chart analysis in three steps</p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-3">
-              {/* Card 1: Upload Chart */}
-              <div className="relative w-full max-w-[319px] mx-auto h-full">
-                {/* Card Container */}
-                <div className="relative pt-16 pb-8 px-6 rounded-[2.5rem] border-2 border-[#5F0BE8]/50 bg-[#1a0f2e]/40 backdrop-blur-xl shadow-[0_0_40px_rgba(95,11,232,0.3)] h-full flex flex-col">
-                  {/* Circular Icon - Positioned above the card */}
-                  <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-[#600ddb]/20 backdrop-blur-[7.58px] shadow-[inset_2.15px_2px_9.24px_0_rgba(255,255,255,0.13),inset_1.22px_1.13px_4.62px_0_rgba(255,255,255,0.13),-1.86px_-1.73px_12px_rgba(0,0,0,0.15),-11.15px_-10.39px_48px_rgba(0,0,0,0.15)] border border-white/35 flex items-center justify-center">
-                    <img
-                      src="/icons/upload.svg"
-                      alt="Upload"
-                      className="w-[66px] h-[75px]"
-                    />
-                  </div>
-                  {/* Title */}
-                  <h2 
-                    className="text-white text-center text-[40px] font-normal leading-normal mb-6 tracking-tight"
-                    style={{ textShadow: "0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(127, 56, 243, 0.3)" }}
-                  >
-                    1. Upload Chart
-                  </h2>
-                  {/* Description */}
-                  <p 
-                    className="text-white/60 text-center text-2xl font-normal leading-normal flex-grow"
-                    style={{ textShadow: "0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(127, 56, 243, 0.2)" }}
-                  >
-                    Upload your trading chart screenshot or image from any platform
-                  </p>
-                </div>
+          <section
+            className="relative mt-0 -mx-8 px-8 py-16 lg:-mx-16 lg:px-16 lg:py-24"
+            style={{
+              marginTop: "70px",
+              background: "linear-gradient(180deg, #000000 0%, #1a0f2e 40%, #1a0f2e 100%)",
+            }}
+          >
+            <div className="mx-auto max-w-7xl">
+              <div className="text-center">
+                <h2 className="mb-2 text-4xl font-bold text-white lg:text-5xl">How It Works</h2>
+                <div className="mx-auto mb-4 h-1 w-64 bg-gradient-to-r from-[#6D1D7D] via-[#5F0BE8] to-[#6D1D7D]" />
+                <p className="mb-16 text-lg text-gray-300">Simple, fast and powerful chart analysis in three steps</p>
               </div>
 
-              {/* Card 2: AI Analysis */}
-              <div className="relative w-full max-w-[319px] mx-auto h-full">
-                {/* Card Container */}
-                <div className="relative pt-16 pb-8 px-6 rounded-[2.5rem] border-2 border-[#5F0BE8]/50 bg-[#1a0f2e]/40 backdrop-blur-xl shadow-[0_0_40px_rgba(95,11,232,0.3)] h-full flex flex-col">
-                  {/* Circular Icon - Positioned above the card */}
-                  <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-[#600ddb]/20 backdrop-blur-[7.58px] shadow-[inset_2.15px_2px_9.24px_0_rgba(255,255,255,0.13),inset_1.22px_1.13px_4.62px_0_rgba(255,255,255,0.13),-1.86px_-1.73px_12px_rgba(0,0,0,0.15),-11.15px_-10.39px_48px_rgba(0,0,0,0.15)] border border-white/35 flex items-center justify-center">
-                    <img
-                      src="/icons/brain.svg"
-                      alt="AI Analysis"
-                      className="w-[66px] h-[75px]"
-                    />
+              <div className="grid gap-8 md:grid-cols-3">
+                {/* Card 1: Upload Chart */}
+                <div className="relative w-full max-w-[319px] mx-auto h-full">
+                  {/* Card Container */}
+                  <div className="relative pt-16 pb-8 px-6 rounded-[2.5rem] border-2 border-[#5F0BE8]/50 bg-[#1a0f2e]/40 backdrop-blur-xl shadow-[0_0_40px_rgba(95,11,232,0.3)] h-full flex flex-col">
+                    {/* Circular Icon - Positioned above the card */}
+                    <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-[#600ddb]/20 backdrop-blur-[7.58px] shadow-[inset_2.15px_2px_9.24px_0_rgba(255,255,255,0.13),inset_1.22px_1.13px_4.62px_0_rgba(255,255,255,0.13),-1.86px_-1.73px_12px_rgba(0,0,0,0.15),-11.15px_-10.39px_48px_rgba(0,0,0,0.15)] border border-white/35 flex items-center justify-center">
+                      <img src="/icons/upload.svg" alt="Upload" className="w-[66px] h-[75px]" />
+                    </div>
+                    {/* Title */}
+                    <h2
+                      className="text-white text-center text-[40px] font-normal leading-normal mb-6 tracking-tight"
+                      style={{ textShadow: "0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(127, 56, 243, 0.3)" }}
+                    >
+                      1. Upload Chart
+                    </h2>
+                    {/* Description */}
+                    <p
+                      className="text-white/60 text-center text-2xl font-normal leading-normal flex-grow"
+                      style={{ textShadow: "0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(127, 56, 243, 0.2)" }}
+                    >
+                      Upload your trading chart screenshot or image from any platform
+                    </p>
                   </div>
-                  {/* Title */}
-                  <h2 
-                    className="text-white text-center text-[40px] font-normal leading-normal mb-6 tracking-tight"
-                    style={{ textShadow: "0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(127, 56, 243, 0.3)" }}
-                  >
-                    2. AI Analysis
-                  </h2>
-                  {/* Description */}
-                  <p 
-                    className="text-white/60 text-center text-2xl font-normal leading-normal flex-grow"
-                    style={{ textShadow: "0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(127, 56, 243, 0.2)" }}
-                  >
-                    Our AI analyzes patterns, levels, and market structure instantly
-                  </p>
                 </div>
-              </div>
 
-              {/* Card 3: Trade Plan */}
-              <div className="relative w-full max-w-[319px] mx-auto h-full">
-                {/* Card Container */}
-                <div className="relative pt-16 pb-8 px-6 rounded-[2.5rem] border-2 border-[#5F0BE8]/50 bg-[#1a0f2e]/40 backdrop-blur-xl shadow-[0_0_40px_rgba(95,11,232,0.3)] h-full flex flex-col">
-                  {/* Circular Icon - Positioned above the card */}
-                  <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-[#600ddb]/20 backdrop-blur-[7.58px] shadow-[inset_2.15px_2px_9.24px_0_rgba(255,255,255,0.13),inset_1.22px_1.13px_4.62px_0_rgba(255,255,255,0.13),-1.86px_-1.73px_12px_rgba(0,0,0,0.15),-11.15px_-10.39px_48px_rgba(0,0,0,0.15)] border border-white/35 flex items-center justify-center">
-                    <img
-                      src="/icons/spiral.svg"
-                      alt="Trade Plan"
-                      className="w-[66px] h-[75px]"
-                    />
+                {/* Card 2: AI Analysis */}
+                <div className="relative w-full max-w-[319px] mx-auto h-full">
+                  {/* Card Container */}
+                  <div className="relative pt-16 pb-8 px-6 rounded-[2.5rem] border-2 border-[#5F0BE8]/50 bg-[#1a0f2e]/40 backdrop-blur-xl shadow-[0_0_40px_rgba(95,11,232,0.3)] h-full flex flex-col">
+                    {/* Circular Icon - Positioned above the card */}
+                    <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-[#600ddb]/20 backdrop-blur-[7.58px] shadow-[inset_2.15px_2px_9.24px_0_rgba(255,255,255,0.13),inset_1.22px_1.13px_4.62px_0_rgba(255,255,255,0.13),-1.86px_-1.73px_12px_rgba(0,0,0,0.15),-11.15px_-10.39px_48px_rgba(0,0,0,0.15)] border border-white/35 flex items-center justify-center">
+                      <img src="/icons/brain.svg" alt="AI Analysis" className="w-[66px] h-[75px]" />
+                    </div>
+                    {/* Title */}
+                    <h2
+                      className="text-white text-center text-[40px] font-normal leading-normal mb-6 tracking-tight"
+                      style={{ textShadow: "0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(127, 56, 243, 0.3)" }}
+                    >
+                      2. AI Analysis
+                    </h2>
+                    {/* Description */}
+                    <p
+                      className="text-white/60 text-center text-2xl font-normal leading-normal flex-grow"
+                      style={{ textShadow: "0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(127, 56, 243, 0.2)" }}
+                    >
+                      Our AI analyzes patterns, levels, and market structure instantly
+                    </p>
                   </div>
-                  {/* Title */}
-                  <h2 
-                    className="text-white text-center text-[40px] font-normal leading-normal mb-6 tracking-tight"
-                    style={{ textShadow: "0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(127, 56, 243, 0.3)" }}
-                  >
-                    3. Trade Plan
-                  </h2>
-                  {/* Description */}
-                  <p 
-                    className="text-white/60 text-center text-2xl font-normal leading-normal flex-grow"
-                    style={{ textShadow: "0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(127, 56, 243, 0.2)" }}
-                  >
-                    Get actionable insights with entry, stop loss, and take profit levels
-                  </p>
+                </div>
+
+                {/* Card 3: Trade Plan */}
+                <div className="relative w-full max-w-[319px] mx-auto h-full">
+                  {/* Card Container */}
+                  <div className="relative pt-16 pb-8 px-6 rounded-[2.5rem] border-2 border-[#5F0BE8]/50 bg-[#1a0f2e]/40 backdrop-blur-xl shadow-[0_0_40px_rgba(95,11,232,0.3)] h-full flex flex-col">
+                    {/* Circular Icon - Positioned above the card */}
+                    <div className="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full bg-[#600ddb]/20 backdrop-blur-[7.58px] shadow-[inset_2.15px_2px_9.24px_0_rgba(255,255,255,0.13),inset_1.22px_1.13px_4.62px_0_rgba(255,255,255,0.13),-1.86px_-1.73px_12px_rgba(0,0,0,0.15),-11.15px_-10.39px_48px_rgba(0,0,0,0.15)] border border-white/35 flex items-center justify-center">
+                      <img src="/icons/spiral.svg" alt="Trade Plan" className="w-[66px] h-[75px]" />
+                    </div>
+                    {/* Title */}
+                    <h2
+                      className="text-white text-center text-[40px] font-normal leading-normal mb-6 tracking-tight"
+                      style={{ textShadow: "0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(127, 56, 243, 0.3)" }}
+                    >
+                      3. Trade Plan
+                    </h2>
+                    {/* Description */}
+                    <p
+                      className="text-white/60 text-center text-2xl font-normal leading-normal flex-grow"
+                      style={{ textShadow: "0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(127, 56, 243, 0.2)" }}
+                    >
+                      Get actionable insights with entry, stop loss, and take profit levels
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
 
           {/* Powerful Features section */}
-          <section className="relative mx-auto mt-24 max-w-7xl lg:mt-32">
-            {/* Background image for this section */}
-            <div className="absolute inset-0 -z-10 overflow-hidden rounded-3xl">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%2010-MTUANLLcPNvx8QA8J8HKxlOjYbdazz.png"
-                alt="Chart background"
-                fill
-                className="object-cover opacity-20"
-              />
-            </div>
-
-            <div className="text-center">
-              <h2 className="mb-2 text-4xl font-bold text-white lg:text-5xl">Powerful Features</h2>
-              <div className="mx-auto mb-4 h-1 w-80 bg-gradient-to-r from-[#6D1D7D] via-[#5F0BE8] to-[#6D1D7D]" />
-              <p className="mb-16 text-lg text-gray-300">Everything you need for successful trading analysis</p>
-            </div>
-
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {/* AI Trade Analysis */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/flash.svg" alt="AI Trade Analysis" className="w-8 h-8" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    AI Trade Analysis
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Advanced pattern recognition and market structure analysis
-                  </p>
-                </div>
-              </div>
-
-              {/* Scalp Trading */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/pulse.svg" alt="Scalp Trading" className="w-8 h-8" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Scalp Trading
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Ultra-short term trading opportunities for quick profits
-                  </p>
-                </div>
-              </div>
-
-              {/* Risk Management */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/shield.svg" alt="Risk Management" className="w-8 h-8" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Risk Management
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Advanced position sizing and risk calculation tools
-                  </p>
-                </div>
-              </div>
-
-              {/* Swing Trading */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/graph-arrow.svg" alt="Swing Trading" className="w-7 h-7" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Swing Trading
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Multi-day to multi-week trading opportunities analysis
-                  </p>
-                </div>
-              </div>
-
-              {/* Price Action Analysis */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/graph-bars.svg" alt="Price Action Analysis" className="w-9 h-9" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Price Action<br />Analysis
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Deep analysis of price movements and market psychology
-                  </p>
-                </div>
-              </div>
-
-              {/* Trade Journaling */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/book.svg" alt="Trade Journaling" className="w-7 h-7" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Trade Journaling
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Track and analyze your trading performance over time
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+          <PowerfullSection />  
 
           {/* Testimonials section */}
           <section className="mx-auto mt-24 max-w-7xl lg:mt-32">
