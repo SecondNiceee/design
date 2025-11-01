@@ -5,8 +5,7 @@ import type React from "react"
 import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Upload, X, TrendingDown, TrendingUp, BarChart3 } from "lucide-react"
+import { Upload, X, TrendingDown, TrendingUp } from "lucide-react"
 import Image from "next/image"
 import { Header } from "@/components/sections/header"
 
@@ -14,6 +13,7 @@ export default function AnalyzePage() {
   const [uploadedImage, setUploadedImage] = useState<string | null>(null)
   const [isDragging, setIsDragging] = useState(false)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const uploadContainerRef = useRef<HTMLDivElement>(null)
 
   const handleFileSelect = (file: File) => {
     if (file && file.type.startsWith("image/")) {
@@ -124,6 +124,7 @@ Risk/Reward Ratio: 1:2.5`,
 
                 {/* Upload area */}
                 <div
+                  ref={uploadContainerRef}
                   className={`border-2 border-dashed rounded-2xl p-8 sm:p-12 text-center transition-colors ${
                     isDragging ? "border-purple-500 bg-purple-500/10" : "border-purple-500/50 bg-[#0a0514]/50"
                   }`}
@@ -160,7 +161,7 @@ Risk/Reward Ratio: 1:2.5`,
                     <Button
                       size="lg"
                       onClick={() => fileInputRef.current?.click()}
-                      className="bg-gradient-to-r from-[#6B21A8] via-[#7C3AED] to-[#8B5CF6] text-white hover:from-[#581C87] hover:via-[#6D28D9] hover:to-[#7C3AED] px-8 py-6 text-lg rounded-full shadow-[0_0_30px_rgba(139,92,246,0.5)]"
+                      className="bg-gradient-to-r from-[#6B21A8] via-[#7C3AED] to-[#8B5CF6] text-white hover:from-[#581C87] hover:via-[#6D28D9] hover:to-[#7C3AED] px-8 py-6 text-lg rounded-full shadow-[0_0_30px_rgba(139,92,246,0.5)] cursor-pointer transition-colors"
                     >
                       Select Image
                     </Button>
@@ -174,28 +175,107 @@ Risk/Reward Ratio: 1:2.5`,
             // Analysis result state
             <Card className="border-2 border-[#5F0BE8]/50 bg-[#1a0f2e]/40 backdrop-blur-xl shadow-[0_0_40px_rgba(95,11,232,0.3)] p-6 sm:p-8 rounded-3xl sm:rounded-[2.5rem]">
               <div className="space-y-6">
-                {/* Header with close button */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <BarChart3 className="w-8 h-8 text-purple-500" />
-                    <div>
-                      <h2 className="text-2xl sm:text-3xl font-bold text-white">Trading Analysis</h2>
-                      <Badge className="bg-purple-600/30 text-purple-400 border-purple-500 mt-1">
-                        {analysis.timeframe}
-                      </Badge>
+                <div className="flex items-start justify-between gap-6">
+                  <div className="flex items-start gap-4">
+                    {/* Icon and title section */}
+                    <div className="flex items-start gap-4">
+                      <svg width="32" height="32" viewBox="0 0 65 65" fill="none" className="flex-shrink-0 mt-1">
+                        <path
+                          d="M59.5832 59.5833H5.4165"
+                          stroke="url(#paint0_linear_31_588)"
+                          strokeWidth="5.5"
+                          strokeLinecap="round"
+                        />
+                        <path
+                          d="M56.875 59.5833V39.2708C56.875 38.1933 56.447 37.16 55.6851 36.3981C54.9233 35.6363 53.8899 35.2083 52.8125 35.2083H44.6875C43.6101 35.2083 42.5767 35.6363 41.8149 36.3981C41.053 37.16 40.625 38.1933 40.625 39.2708V59.5833"
+                          stroke="url(#paint1_linear_31_588)"
+                          strokeWidth="5.5"
+                        />
+                        <path
+                          d="M40.625 59.5833V24.375M24.375 59.5833V13.5416C24.375 9.71204 24.375 7.79725 25.5667 6.60829C26.7529 5.41663 28.6677 5.41663 32.5 5.41663C36.3323 5.41663 38.2444 5.41663 39.4333 6.60829C40.625 7.79454 40.625 9.70933 40.625 13.5416"
+                          stroke="url(#paint2_linear_31_588)"
+                          strokeWidth="5.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M24.375 59.5833V25.7291C24.375 24.6517 23.947 23.6184 23.1851 22.8565C22.4233 22.0946 21.3899 21.6666 20.3125 21.6666H12.1875C11.1101 21.6666 10.0767 22.0946 9.31488 22.8565C8.55301 23.6184 8.125 24.6517 8.125 25.7291V43.3333M8.125 59.5833V53.4895"
+                          stroke="url(#paint3_linear_31_588)"
+                          strokeWidth="5.5"
+                          strokeLinecap="round"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_31_588"
+                            x1="5.4165"
+                            y1="60.0833"
+                            x2="59.5832"
+                            y2="60.0833"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stopColor="#6D1D7D" />
+                            <stop offset="1" stopColor="#5F0BE8" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint1_linear_31_588"
+                            x1="40.625"
+                            y1="47.3958"
+                            x2="56.875"
+                            y2="47.3958"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stopColor="#6D1D7D" />
+                            <stop offset="1" stopColor="#5F0BE8" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint2_linear_31_588"
+                            x1="24.375"
+                            y1="32.5"
+                            x2="40.625"
+                            y2="32.5"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stopColor="#6D1D7D" />
+                            <stop offset="1" stopColor="#5F0BE8" />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint3_linear_31_588"
+                            x1="8.125"
+                            y1="40.625"
+                            x2="24.375"
+                            y2="40.625"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stopColor="#6D1D7D" />
+                            <stop offset="1" stopColor="#5F0BE8" />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                      <div>
+                        <div className="flex items-center gap-3 flex-wrap">
+                          <h2 className="text-2xl sm:text-3xl font-bold text-white">Trading Analysis</h2>
+                          <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] bg-clip-text text-transparent">
+                            1min
+                          </span>
+                        </div>
+                        <div className="h-1 mt-2 bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] rounded-full" />
+                      </div>
                     </div>
                   </div>
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={resetUpload}
-                    className="text-white/70 hover:text-white hover:bg-white/10 rounded-full"
-                  >
-                    <X className="w-6 h-6" />
-                  </Button>
+
+                  {/* Right side: close button */}
+                  <div className="flex items-center gap-4">
+                    <button
+                      onClick={resetUpload}
+                      className="w-10 h-10 rounded-full bg-gradient-to-br from-[#6D1D7D] to-[#5F0BE8] flex items-center justify-center hover:opacity-80 transition-opacity flex-shrink-0 cursor-pointer"
+                      aria-label="Close"
+                    >
+                      <X className="w-5 h-5 text-white" />
+                    </button>
+                  </div>
                 </div>
 
-                <p className="text-white/70 text-sm">Graph with input line</p>
+                <p className="text-white/70 text-sm sm:text-base lg:text-lg">Graph with input line</p>
 
                 {/* Uploaded chart image */}
                 <div className="relative rounded-2xl overflow-hidden border-2 border-purple-500/30">
@@ -219,7 +299,7 @@ Risk/Reward Ratio: 1:2.5`,
                       analysis.recommendation === "SELL"
                         ? "bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700"
                         : "bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700"
-                    } text-white px-12 py-6 text-xl font-bold rounded-full shadow-[0_0_30px_rgba(236,72,153,0.5)] min-w-[200px]`}
+                    } text-white px-12 py-6 text-xl font-bold rounded-full shadow-[0_0_30px_rgba(236,72,153,0.5)] min-w-[200px] cursor-pointer transition-colors`}
                   >
                     {analysis.recommendation === "SELL" ? (
                       <TrendingDown className="w-6 h-6 mr-2" />
