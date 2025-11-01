@@ -1,147 +1,141 @@
 import Image from "next/image"
 
 export const PowerfullSection = () => {
-    return (
-                  <section className="relative mx-auto mt-24 max-w-7xl lg:mt-32">
-            {/* Background image for this section */}
-            <div className="absolute inset-0 -z-10 overflow-hidden rounded-3xl">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image%2010-MTUANLLcPNvx8QA8J8HKxlOjYbdazz.png"
-                alt="Chart background"
-                fill
-                className="object-cover opacity-20"
-              />
+  return (
+    <section className="relative mx-auto mt-16 sm:mt-24 max-w-7xl px-[20px] sm:px-[20px] lg:px-[20px] lg:mt-32">
+      {/* Background image for this section */}
+      <div className="absolute inset-0 -z-10 overflow-hidden rounded-3xl">
+        <Image
+          src="/images/design-mode/image%2010.png"
+          alt="Chart background"
+          fill
+          className="object-cover opacity-35"
+        />
+      </div>
+
+      <div className="text-center">
+        <h2 className="mb-2 text-3xl sm:text-4xl font-bold text-white lg:text-5xl">Powerful Features</h2>
+        <div className="mx-auto mb-4 h-1 w-64 sm:w-80 bg-gradient-to-r from-[#6D1D7D] via-[#5F0BE8] to-[#6D1D7D]" />
+        <p className="mb-12 sm:mb-16 text-base sm:text-lg text-gray-300">
+          Everything you need for successful trading analysis
+        </p>
+      </div>
+
+      <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+        {/* AI Trade Analysis */}
+        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#7f38f3]/20 to-[#5F0BE8]/10 p-8 backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-purple-500/0 to-purple-600/0 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+
+          <div className="relative z-10 flex items-start gap-6">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6D1D7D] to-[#5F0BE8] shadow-lg shadow-purple-500/30 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+              <img src="/icons/flash.svg" alt="AI Trade Analysis" className="h-10 w-10" />
             </div>
 
-            <div className="text-center">
-              <h2 className="mb-2 text-4xl font-bold text-white lg:text-5xl">Powerful Features</h2>
-              <div className="mx-auto mb-4 h-1 w-80 bg-gradient-to-r from-[#6D1D7D] via-[#5F0BE8] to-[#6D1D7D]" />
-              <p className="mb-16 text-lg text-gray-300">Everything you need for successful trading analysis</p>
+            <div className="flex-1">
+              <h3 className="mb-3 text-2xl font-bold text-white lg:text-3xl">AI Trade Analysis</h3>
+              <div className="mb-4 h-1 w-full rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8]" />
+              <p className="text-base leading-relaxed text-gray-300 lg:text-lg">
+                Advanced pattern recognition and market structure analysis powered by artificial intelligence
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Scalp Trading */}
+        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#7f38f3]/20 to-[#5F0BE8]/10 p-8 backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-purple-500/0 to-purple-600/0 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+
+          <div className="relative z-10 flex items-start gap-6">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6D1D7D] to-[#5F0BE8] shadow-lg shadow-purple-500/30 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+              <img src="/icons/pulse.svg" alt="Scalp Trading" className="h-10 w-10" />
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {/* AI Trade Analysis */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/flash.svg" alt="AI Trade Analysis" className="w-8 h-8" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    AI Trade Analysis
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Advanced pattern recognition and market structure analysis
-                  </p>
-                </div>
-              </div>
-
-              {/* Scalp Trading */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/pulse.svg" alt="Scalp Trading" className="w-8 h-8" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Scalp Trading
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Ultra-short term trading opportunities for quick profits
-                  </p>
-                </div>
-              </div>
-
-              {/* Risk Management */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/shield.svg" alt="Risk Management" className="w-8 h-8" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Risk Management
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Advanced position sizing and risk calculation tools
-                  </p>
-                </div>
-              </div>
-
-              {/* Swing Trading */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/graph-arrow.svg" alt="Swing Trading" className="w-7 h-7" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Swing Trading
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Multi-day to multi-week trading opportunities analysis
-                  </p>
-                </div>
-              </div>
-
-              {/* Price Action Analysis */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/graph-bars.svg" alt="Price Action Analysis" className="w-9 h-9" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Price Action
-                    <br />
-                    Analysis
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Deep analysis of price movements and market psychology
-                  </p>
-                </div>
-              </div>
-
-              {/* Trade Journaling */}
-              <div className="relative w-full max-w-[402px] mx-auto">
-                <div className="relative rounded-[45px] bg-[#7f38f3]/15 backdrop-blur-[4.4px] min-h-[291px] shadow-[-10.04px_-9.35px_43.2px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_rgba(0,0,0,0.15),inset_1.81px_1.68px_7.78px_rgba(255,255,255,0.15),inset_0.97px_0.9px_3.89px_rgba(255,255,255,0.15)]">
-                  {/* Icon Circle */}
-                  <div className="absolute left-[38px] top-[54px] w-[80.1px] h-[80.1px] rounded-full bg-gradient-to-r from-[#6D1D7D]/80 to-[#5F0BE8]/80 backdrop-blur-[6.8px] flex items-center justify-center z-20 shadow-[-10.04px_-9.35px_43.2px_-10.8px_rgba(0,0,0,0.15),-1.67px_-1.56px_10.8px_-7.2px_rgba(0,0,0,0.15),inset_1.93px_1.8px_8.32px_rgba(255,255,255,0.126),inset_1.1px_1.02px_4.16px_rgba(255,255,255,0.126)]">
-                    <img src="/icons/book.svg" alt="Trade Journaling" className="w-7 h-7" />
-                  </div>
-                  {/* Title */}
-                  <h3 className="absolute left-[138px] top-[72px] w-[264px] text-white text-[32px] font-medium leading-[39px] z-20">
-                    Trade Journaling
-                  </h3>
-                  {/* Gradient Line */}
-                  <div className="absolute left-[170px] top-[120px] w-[251px] h-[7px] rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8] z-20" />
-                  {/* Description */}
-                  <p className="absolute left-[138px] top-[145px] w-[264px] text-white/80 text-[24px] font-medium leading-[26px] z-20">
-                    Track and analyze your trading performance over time
-                  </p>
-                </div>
-              </div>
+            <div className="flex-1">
+              <h3 className="mb-3 text-2xl font-bold text-white lg:text-3xl">Scalp Trading</h3>
+              <div className="mb-4 h-1 w-full rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8]" />
+              <p className="text-base leading-relaxed text-gray-300 lg:text-lg">
+                Ultra-short term trading opportunities for quick profits with precision timing
+              </p>
             </div>
-          </section>
-    )
+          </div>
+        </div>
+
+        {/* Risk Management */}
+        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#7f38f3]/20 to-[#5F0BE8]/10 p-8 backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-purple-500/0 to-purple-600/0 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+
+          <div className="relative z-10 flex items-start gap-6">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6D1D7D] to-[#5F0BE8] shadow-lg shadow-purple-500/30 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+              <img src="/icons/shield.svg" alt="Risk Management" className="h-10 w-10" />
+            </div>
+
+            <div className="flex-1">
+              <h3 className="mb-3 text-2xl font-bold text-white lg:text-3xl">Risk Management</h3>
+              <div className="mb-4 h-1 w-full rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8]" />
+              <p className="text-base leading-relaxed text-gray-300 lg:text-lg">
+                Advanced position sizing and risk calculation tools to protect your capital
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Swing Trading */}
+        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#7f38f3]/20 to-[#5F0BE8]/10 p-8 backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-purple-500/0 to-purple-600/0 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+
+          <div className="relative z-10 flex items-start gap-6">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6D1D7D] to-[#5F0BE8] shadow-lg shadow-purple-500/30 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+              <img src="/icons/graph-arrow.svg" alt="Swing Trading" className="h-9 w-9" />
+            </div>
+
+            <div className="flex-1">
+              <h3 className="mb-3 text-2xl font-bold text-white lg:text-3xl">Swing Trading</h3>
+              <div className="mb-4 h-1 w-full rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8]" />
+              <p className="text-base leading-relaxed text-gray-300 lg:text-lg">
+                Multi-day to multi-week trading opportunities analysis for strategic positions
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Price Action Analysis */}
+        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#7f38f3]/20 to-[#5F0BE8]/10 p-8 backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-purple-500/0 to-purple-600/0 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+
+          <div className="relative z-10 flex items-start gap-6">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6D1D7D] to-[#5F0BE8] shadow-lg shadow-purple-500/30 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+              <img src="/icons/graph-bars.svg" alt="Price Action Analysis" className="h-11 w-11" />
+            </div>
+
+            <div className="flex-1">
+              <h3 className="mb-3 text-2xl font-bold text-white lg:text-3xl">Price Action Analysis</h3>
+              <div className="mb-4 h-1 w-full rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8]" />
+              <p className="text-base leading-relaxed text-gray-300 lg:text-lg">
+                Deep analysis of price movements and market psychology for informed decisions
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Trade Journaling */}
+        <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#7f38f3]/20 to-[#5F0BE8]/10 p-8 backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 via-purple-500/0 to-purple-600/0 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+
+          <div className="relative z-10 flex items-start gap-6">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-[#6D1D7D] to-[#5F0BE8] shadow-lg shadow-purple-500/30 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+              <img src="/icons/book.svg" alt="Trade Journaling" className="h-9 w-9" />
+            </div>
+
+            <div className="flex-1">
+              <h3 className="mb-3 text-2xl font-bold text-white lg:text-3xl">Trade Journaling</h3>
+              <div className="mb-4 h-1 w-full rounded-full bg-gradient-to-r from-[#6D1D7D] to-[#5F0BE8]" />
+              <p className="text-base leading-relaxed text-gray-300 lg:text-lg">
+                Track and analyze your trading performance over time to improve results
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
 }
